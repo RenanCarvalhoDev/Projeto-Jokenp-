@@ -1,65 +1,67 @@
 //Projeto 2 (Jokenpô) - Renan Augusto de Carvalho
 
 
-console.log("")
+console.log("Olá, aqui é o jogo de jokenpô, abaixo, escolha quantas vezes deseja jogar e qual o sua ecolha (PEDRA, PAPEL ou TESOURA)");
+let round = +prompt("Quantas rodadas será o jogo ??");
+let a = 0;
+let b = 0;
+let c = 0;
+let winnerPlayer = 0;
+let winnerComputer = 0;
+let tie  = 0;
+let option = [];
+let randon = [];
 
-let resposta = [];
-let a =0 ;
-let b =0 ;
-let contador = 0;
-let perguntas =["Você pegou o escudo de osso do Orc da montanha?(s/n)","Você tirou a runa do olho do Drgão Colonus?(s/n)","Você pegou o chifre do Touro Assasino?(s/n)","Você pegou a pele do Golem Arterfil?(s/n)", "Você pegou o colar do Dragão negro da Floresta?(s/n)"]//array com todas as perguntas.
-
-    do { // laço de repetição para realizar as perguntas existentes no array 'perguntas'.
-  
-        console.log("\nDigite S ou N para continuar !!!!!\n")
-        resposta [a] = resposta.push = prompt(perguntas[b])// adiciona ao array 'name' a resposta de cada pergunta do array 'perguntas'.
-        
-             if (resposta[a] == 's'){
-                 b ++    
-                 a ++
-                console.clear()
-             }else if (resposta[a]=='n'){
-                 b ++    
-                 a ++
-                console.clear()
-            }
+while( c  < round ){
     
-    }while(a<=4)
+    console.log("Escolha uma opção:\n");
+    console.log("Opção 1 : PEDRA --- Opção 2 : PAPEL  --- Opção 3 : TESOURA\n");
+    option [a] = option.push = +prompt(": ");
 
-    for (let i = 0; i <= 5; i++) // laço para verificar quantas strings "s" existe na array 'resposta'.
+    if (option[a]>= 1 && option[a] <=3){
         
-    {
-        if (resposta[i] == 's')
-       {
-           contador ++
-       }
+        randon[b] = parseInt(Math.floor(Math.random() * 3 +1 ));
+        
+        if ((randon[b] == 3 && option[a] == 1)||(randon[b] == 1 && option[a] == 2)||(randon[b] == 2 && option[a] == 3)){
+        
+            console.log("\nJooookeeeennnpoooô!");
+            console.log(`\nComputador : ${randon[b]} --- Jogador : ${option[a]}`);
+            console.log("O JOGADOR ganhou essa !!!");
+            
+            winnerPlayer ++;   
+        }
+
+        if ((randon[b] == 1 && option[a] == 3)||(randon[b] == 2 && option[a] == 1)||(randon[b] == 3 && option[a] == 2)){
+        
+            console.log("\nJooookeeeennnpoooô!");
+            console.log(`\nComputador : ${randon[b]} --- Jogador : ${option[a]}`);
+            console.log("O COMPUTADOR ganhou essa !!!");
+            
+            winnerComputer ++;   
+        }
+
+        if ((randon[b] == 1 && option[a] == 1)||(randon[b] == 2 && option[a] == 2)||(randon[b] == 3 && option[a] == 3)){
+        
+            console.log("\nJooookeeeennnpoooô!");
+            console.log(`\nComputador : ${randon[b]} --- Jogador : ${option[a]}`);
+            console.log("Aconteceu o inexplicavel, houve um EMPATE !!!");
+           
+            tie ++;   
+        }
+        
+        
+
+        b++;
+        a++;
+        c++;
     }
+}
 
-// nesse ponto, ja se sabe quantos "s" existe no array 'resposta' e verifica qual caminho a história do Heroi encerrara.
 
-if (contador == 0)
-    {
-      console.log("\nEle falhará miseravelmente!\n")
-    }
-     
-else if (contador >=1 && contador <=2)
-    {
-      console.log("\nEle falhará, mas ainda consegue fugir da situação!\n")
-    }    
-             
-else if (contador == 3)
-    {
-      console.log("\nEle chegará perto de conseguir alcançar seu objetivo, mas acaba falhando por pouco!\n")                   
-    }
-         
-else if (contador == 4)
-    {
-      console.log("\nDepois de muito esforço ele conquista seu objetivo, embora não de maneira perfeita!\n")                   
-    } 
+console.clear();
+console.log(`O JOGADOR teve ${winnerPlayer} vitoria(s)\n`);
+console.log(`O COMPUTADOR teve ${winnerComputer} vitoria(s)\n`);
+console.log(`Teve ${tie} empate(s)\n`);
 
-else if (contador == 5)
-    {
-      console.log("\nEle triunfará de maneira inquestionável e seus feitos serão lembrados por muitas gerações!\n")                   
-    } 
 
-  // FIM DO CÓDIGO.
+    
