@@ -1,8 +1,9 @@
 //Projeto 2 (Jokenpô) - Renan Augusto de Carvalho
 
-console.log("Olá, aqui é o jogo de jokenpô, abaixo, escolha quantas vezes deseja jogar e qual o sua ecolha (PEDRA, PAPEL ou TESOURA)");
+console.log("Olá, você está no jogo de jokenpô, abaixo, escolha quantas vezes deseja jogar e qual será sua 1ecolha: \n(1- PEDRA, 2- PAPEL ou 3- TESOURA)\n");
 
 let round = +prompt("Quantas rodadas será o jogo ?? ");
+
 let a = 0;
 let b = 0;
 let c = 0;
@@ -14,8 +15,8 @@ let randon = [];
 
 while( c  < round ){
     
-    console.log("Escolha uma opção:\n");
-    console.log("Opção 1 : PEDRA --- Opção 2 : PAPEL  --- Opção 3 : TESOURA\n");
+    console.log("\nEscolha uma opção:\n");
+    console.log("    1 : PEDRA ---  2 : PAPEL  ---  3 : TESOURA\n");
     option [a] = option.push = +prompt(": ");
 
     if (option[a]>= 1 && option[a] <=3){
