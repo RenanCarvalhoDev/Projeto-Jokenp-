@@ -23,7 +23,7 @@ do {
 
             if (option[a]>= 1 && option[a] <=3){
                     
-              randon[b] = parseInt(Math.random() * 3 +1 );
+              randon[b] = parseInt(Math.random() * 2 +1 );
                     
                   if ((randon[b] == 3 && option[a] == 1)||(randon[b] == 1 && option[a] == 2)||(randon[b] == 2 && option[a] == 3)){
                     
