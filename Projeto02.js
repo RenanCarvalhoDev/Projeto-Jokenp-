@@ -11,20 +11,24 @@ let randon = [];
 let answer;
 let a,b,c;
 let computer;
+let vish, retornoVish;
 
 //Criando uma função para gravar numa variavel qual o valor de Math.randon será relacionado a uma string do jogo.
-function nameComputer (){
-  switch (randon [b]){
+function nameComputer (vish){
+  switch (vish){
         case 1:
           computer = "PEDRA"
+          return computer
         break;
 
         case 2:
           computer = "PAPEL"
+          return computer
         break;
         
         case 3:
           computer = "TESOURA"
+          return computer
          break; 
   }
 }
@@ -53,9 +57,9 @@ do {
                     
                   if ((randon[b] == 3 && option[a] == 'PEDRA')||(randon[b] == 1 && option[a] == "PAPEL")||(randon[b] == 2 && option[a] == "TESOURA")){//comparando a opção que o usuario escolheu e o numero aleatorio que foi gerado pelo Math.randon.
                     
-                    nameComputer();//Chamando a função para trocar o valor do Math.randon de numero par uma palavra.                    
+                    retornoVish = nameComputer(randon[b]);//Chamando a função para trocar o valor do Math.randon de numero par uma palavra.                    
                     console.log("\nJooookeeeennnpoooô!");
-                    console.log("\nComputador: \033[1;31m"+ computer + "\033[0;0m <---> Jogador : \033[1;32m"+ option[a] + "\033[0;0m" );
+                    console.log("\nComputador: \033[1;31m"+ retornoVish + "\033[0;0m <---> Jogador : \033[1;32m"+ option[a] + "\033[0;0m" );
                     console.log("O JOGADOR ganhou essa !!!\n");                       
                     winnerPlayer ++; 
                     
@@ -63,9 +67,9 @@ do {
 
                   if ((randon[b] == 1 && option[a] == "TESOURA")||(randon[b] == 2 && option[a] == "PEDRA")||(randon[b] == 3 && option[a] == "PAPEL")){//comparando a opção que o usuario escolheu e o numero aleatorio que foi gerado pelo Math.randon.
                     
-                    nameComputer();//Chamando a função para trocar o valor do Math.randon de numero par uma palavra.
+                    retornoVish = nameComputer(randon[b]);//Chamando a função para trocar o valor do Math.randon de numero par uma palavra.
                     console.log("\nJooookeeeennnpoooô!");
-                    console.log("\nComputador: \033[1;32m"+ computer +"\033[0;0m <---> Jogador : \033[1;31m"+ option[a] +"\033[0;0m" );
+                    console.log("\nComputador: \033[1;32m"+ retornoVish +"\033[0;0m <---> Jogador : \033[1;31m"+ option[a] +"\033[0;0m" );
                     console.log("O COMPUTADOR ganhou essa !!!\n");
                     winnerComputer ++;
                     
@@ -73,9 +77,9 @@ do {
 
                   if ((randon[b] == 1 && option[a] == "PEDRA")||(randon[b] == 2 && option[a] == "PAPEL")||(randon[b] == 3 && option[a] == "TESOURA")){//comparando a opção que o usuario escolheu e o numero aleatorio que foi gerado pelo Math.randon.
                     
-                    nameComputer();//Chamando a função para trocar o valor do Math.randon de numero par uma palavra.
+                    retornoVish = nameComputer(randon[b]);//Chamando a função para trocar o valor do Math.randon de numero par uma palavra.
                     console.log("\nJooookeeeennnpoooô!");
-                    console.log("\nComputador: \033[1;34m"+ computer +"\033[0;0m <---> Jogador : \033[1;34m"+ option[a] +"\033[0;0m" );
+                    console.log("\nComputador: \033[1;34m"+ retornoVish +"\033[0;0m <---> Jogador : \033[1;34m"+ option[a] +"\033[0;0m" );
                     console.log("Aconteceu o inexplicavel, houve um EMPATE !!!\n");   
                     tie ++;   
                     
