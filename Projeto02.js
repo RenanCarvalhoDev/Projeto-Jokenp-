@@ -4,7 +4,6 @@ console.log(
 ); //Mostrando a primeira informação do jogo e mudando a colocação da letra JOKENPO.
 
 //declarando as variveis comuns e as array.
-
 let winnerPlayer = 0;
 let winnerComputer = 0;
 let tie = 0;
