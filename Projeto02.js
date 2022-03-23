@@ -1,10 +1,10 @@
 //Projeto 2 (Jokenpô) - Renan Augusto de Carvalho
-
 console.log(
     'Olá, você está no jogo de \033[1;33mJOKENPÔ\033[0;0m , abaixo, escolha quantas vezes deseja jogar : \n',
 ); //Mostrando a primeira informação do jogo e mudando a colocação da letra JOKENPO.
 
 //declarando as variveis comuns e as array.
+
 let winnerPlayer = 0;
 let winnerComputer = 0;
 let tie = 0;
